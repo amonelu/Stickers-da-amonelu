@@ -1,2 +1,2 @@
 # Stickers-da-amonelu
-Loja amonelu stickers animados personalizados para WhatsApp e Telegram.
+Loja amonelu stickers animados personalizados para WhatsApp e Instagram.
