@@ -1,150 +1,74 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>♡ Amonelu Stickers ♡</title>
+<title>Amonelu Stickers</title>
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
-body{
-background:#111;
-color:#fff;
-text-align:center;
-}
-
-.banner{
-width:100%;
-display:block;
-}
-
-.titulo{
-font-size:42px;
-color:#ff7de9;
-margin-top:20px;
-text-shadow:0 0 10px #ff66cc;
-}
-
-.sub{
-font-size:20px;
-color:#f5b3ff;
-margin:15px;
-}
-
-.produto{
-background:#1d1d1d;
-width:90%;
-max-width:360px;
-margin:25px auto;
-padding:25px;
-border-radius:25px;
-box-shadow:0 0 20px rgba(255,105,180,.4);
-}
-
-.produto h2{
-color:#ff7de9;
-}
-
-.produto p{
-color:#fff;
-font-size:20px;
-}
-
-.preco{
-font-size:34px;
-color:#ff4fb8;
-font-weight:bold;
-margin:15px 0;
-}
-
-.botao{
-display:inline-block;
-padding:15px 30px;
-border-radius:40px;
-background:linear-gradient(90deg,#ff5ec4,#b96cff);
-color:#fff;
-text-decoration:none;
-font-size:18px;
-font-weight:bold;
-}
-
-footer{
-margin:40px;
-color:#f5b3ff;
-font-size:18px;
-}
-
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-width:65px;
-height:65px;
-background:#25D366;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:34px;
-text-decoration:none;
-box-shadow:0 0 20px #25D366;
-animation:pulsar 1.5s infinite;
-}
-
-@keyframes pulsar{
-0%{transform:scale(1);}
-50%{transform:scale(1.1);}
-100%{transform:scale(1);}
-}
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<img class="banner" src="file_00000000b29c720eb9ee8120087b1887.png" alt="Banner">
+<header>
 
-<h1 class="titulo">♡ Amonelu Stickers ♡</h1>
+<div class="logo">
+♡ Amonelu Stickers ♡
+</div>
 
-<p class="sub">
-♡ Stickers animados personalizados feitos com muito carinho. ♡
-</p>
+<div class="menu">
 
-<div class="produto">
-<h2>♡ Pacote Básico ♡</h2>
-<p>♡ 10 stickers personalizados</p>
-<div class="preco">R$10,00</div>
+<button class="menu-btn">🏠 Início</button>
 
-<a class="botao" href="https://wa.me/5581984190122?text=Olá!%20Vi%20o%20site%20Amonelu%20Stickers%20e%20quero%20encomendar%20stickers%20personalizados.">
-💰 Comprar no WhatsApp
-</a>
+<button class="menu-btn">🛍️ Catálogo</button>
+
+<button class="menu-btn">❤️ Favoritos</button>
+
+<button class="menu-btn">🛒 Carrinho <span id="carrinho">0</span></button>
 
 </div>
 
-<div class="produto">
-<h2>🦋 Pacote Premium 🦋</h2>
-<p>♡ 30 stickers personalizados</p>
-<div class="preco">R$25,00</div>
+</header>
 
-<a class="botao" href="https://wa.me/5581984190122?text=Olá!%20Vi%20o%20site%20Amonelu%20Stickers%20e%20quero%20encomendar%20stickers%20personalizados.">
-💰 Comprar no WhatsApp
-</a>
+<section class="banner">
+
+<img src="file_00000000b29c720eb9ee8120087b1887.png" alt="Banner">
+
+</section>
+
+<section class="pesquisa">
+
+<input type="text" placeholder="🔎 Procurar sticker...">
+
+</section>
+
+<section class="categorias">
+
+<button>BTS 💜</button>
+
+<button>😂 Engraçados</button>
+
+<button>🐶 Cachorros</button>
+
+<button>💕 Personalizados</button>
+
+<button>🎵 Música</button>
+
+</section>
+
+<h2 class="titulo">
+✨ Escolha seus stickers ✨
+</h2>
+
+<div class="loja">
+
+<!-- Aqui vamos colocar os stickers -->
 
 </div>
 
-<footer>
-♡ Obrigado por visitar a <b>Amonelu Stickers</b> ♡
-</footer>
-
-</a>
+<script src="script.js"></script>
 
 </body>
 </html>
