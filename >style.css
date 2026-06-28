@@ -6,52 +6,151 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#0f0b16;
-color:#fff;
+background:#ffeaf7;
+background-image:
+radial-gradient(circle,#ffd1ea 2px,transparent 2px);
+background-size:30px 30px;
+color:#7b2c6b;
 }
 
-.topo{
-background:#1a1026;
+header{
+background:#ffffff;
 padding:15px;
+position:sticky;
+top:0;
 display:flex;
 flex-wrap:wrap;
 justify-content:space-between;
 align-items:center;
-box-shadow:0 0 20px #ff4fd8;
+box-shadow:0 4px 15px rgba(255,105,180,.2);
 }
 
 .logo{
 font-size:32px;
 font-weight:bold;
-color:#ff7de9;
+color:#ff4fa3;
 }
 
 nav{
 display:flex;
-gap:20px;
+gap:15px;
+flex-wrap:wrap;
 }
 
 nav a{
-color:white;
 text-decoration:none;
+color:#a03cc2;
 font-weight:bold;
 }
 
 nav a:hover{
-color:#ff7de9;
+color:#ff4fa3;
+}
+
+.pesquisa{
+width:100%;
+margin-top:15px;
 }
 
 .pesquisa input{
-width:280px;
-padding:12px;
-border:none;
+width:100%;
+padding:14px;
 border-radius:30px;
-background:#fff;
+border:2px solid #ffc0e6;
+font-size:16px;
 }
 
 .banner img{
 width:100%;
-display:block;
-border-radius:20px;
+border-radius:25px;
+margin:20px 0;
+}
+
+.categorias{
+display:flex;
+gap:10px;
+overflow-x:auto;
+padding:10px;
+}
+
+.categorias button{
+background:#ff7fc6;
+color:#fff;
+border:none;
+padding:12px 18px;
+border-radius:30px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.personalizado{
+background:#fff;
+margin:20px;
+padding:20px;
+border-radius:25px;
+box-shadow:0 5px 15px rgba(255,105,180,.2);
+}
+
+.pacotes{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:10px;
 margin-top:15px;
+}
+
+.pacotes button{
+background:#f6e2ff;
+border:none;
+padding:15px;
+border-radius:15px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.titulo{
+text-align:center;
+margin:30px 0;
+font-size:30px;
+color:#ff4fa3;
+}
+
+.produtos{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+gap:20px;
+padding:20px;
+}
+
+.card{
+background:#fff;
+border-radius:20px;
+padding:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+text-align:center;
+}
+
+.card img{
+width:100%;
+border-radius:15px;
+}
+
+.card h3{
+margin:10px 0;
+}
+
+.preco{
+font-size:22px;
+font-weight:bold;
+color:#ff4fa3;
+}
+
+.comprar{
+margin-top:10px;
+background:#ff4fa3;
+color:white;
+border:none;
+padding:12px;
+border-radius:30px;
+width:100%;
+cursor:pointer;
 }
