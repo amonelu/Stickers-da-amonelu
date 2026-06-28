@@ -3,97 +3,97 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Amonelu Stickers</title>
 
 <link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
 <header>
 
-<h1 class="logo">♡ Amonelu Stickers ♡</h1>
-
-<div class="menu">
-<button>🏠 Início</button>
-<button>🛍️ Catálogo</button>
-<button>❤️ Favoritos</button>
-<button>🛒 Carrinho <span id="carrinho">0</span></button>
+<div class="logo">
+🤍 Amonelu Stickers 🤍
 </div>
 
-</header>
+<nav>
 
-<img class="banner" src="file_00000000b29c720eb9ee8120087b1887.png" alt="Banner">
+<a href="#">Início</a>
+<a href="#">Catálogo</a>
+<a href="#">Favoritos</a>
+<a href="#">Carrinho 🛒 <span id="contador">0</span></a>
+
+</nav>
 
 <div class="pesquisa">
 <input type="text" placeholder="🔎 Procurar stickers...">
 </div>
 
-<div class="categorias">
+</header>
+
+<section class="banner">
+
+<img src="banner.png" alt="Banner">
+
+</section>
+
+<section class="categorias">
+
 <button>💜 BTS</button>
 <button>😂 Engraçados</button>
 <button>🐶 Cachorros</button>
-<button>💕 Personalizados</button>
+<button>💖 Personalizados</button>
 <button>🎵 Música</button>
-</div>
-<div class="produto">
+<button>🎬 Filmes</button>
+<button>✨ Animados</button>
 
-<h2>📸 Stickers Personalizados com Sua Foto</h2>
+</section>
 
-<p>💖 Envie sua foto e escolha a quantidade.</p>
+<section class="personalizado">
 
-<label>Quantidade:</label><br><br>
+<div class="foto">
 
-<select id="quantidade">
-<option value="3">3 stickers - R$10,00</option>
-<option value="5">5 stickers - R$15,00</option>
-<option value="10">10 stickers - R$25,00</option>
-<option value="20">20 stickers - R$40,00</option>
-<option value="30">30 stickers - R$55,00</option>
-</select>
+<h2>📷 Stickers personalizados</h2>
 
-<br><br>
+<p>Envie sua foto e escolha a quantidade.</p>
 
-<label>Escolha sua foto:</label><br><br>
-
-<input type="file" accept="image/*">
-
-<br><br>
-
-<a class="botao" href="https://wa.me/55SEUNUMERO">
-✨ Enviar Foto e Comprar
-</a>
+<input type="file">
 
 </div>
-<h2 class="titulo">✨ Escolha seus stickers ✨</h2>
 
-<div class="loja">
+<div class="quantidade">
 
-<div class="produto">
-<img src="stickers/acorda-preguica.png" width="100%">
-<h3>😂 Acorda, Preguiça!</h3>
-<p>R$ 2,00</p>
-<button onclick="adicionarCarrinho()">🛒 Comprar</button>
+<h2>Escolha a quantidade</h2>
+
+<button>3 Stickers<br>R$5,00</button>
+
+<button>5 Stickers<br>R$8,00</button>
+
+<button>10 Stickers<br>R$15,00</button>
+
+<button>20 Stickers<br>R$25,00</button>
+
+<button>30 Stickers<br>R$35,00</button>
+
+<button>50 Stickers<br>R$50,00</button>
+
 </div>
 
-<div class="produto">
-<img src="stickers/bom-dia.png" width="100%">
-<h3>🌸 Bom Dia!</h3>
-<p>R$ 2,00</p>
-<button onclick="adicionarCarrinho()">🛒 Comprar</button>
-</div>
+</section>
 
-<div class="produto">
-<img src="stickers/bts.png" width="100%">
-<h3>💜 BTS</h3>
-<p>R$ 5,00</p>
-<button onclick="adicionarCarrinho()">🛒 Comprar</button>
-</div>
+<h2 class="titulo">
+💖 Escolha seus stickers 💖
+</h2>
+
+<div class="produtos">
+
+<!-- Aqui vamos colocar todos os stickers -->
 
 </div>
 
 <script src="script.js"></script>
 
 </body>
-</html>p
+</html>
