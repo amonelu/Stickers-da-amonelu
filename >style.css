@@ -154,3 +154,85 @@ border-radius:30px;
 width:100%;
 cursor:pointer;
 }
+.detalhes-sticker{
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+margin:30px;
+padding:20px;
+background:#fff;
+border:2px solid #f3b5ff;
+border-radius:25px;
+box-shadow:0 10px 30px rgba(255,0,170,.15);
+}
+
+.imagem-sticker{
+flex:1;
+min-width:280px;
+}
+
+.imagem-sticker img{
+width:100%;
+border-radius:20px;
+}
+
+.info-sticker{
+flex:1;
+min-width:280px;
+}
+
+.info-sticker h2{
+font-size:32px;
+color:#8b2be2;
+}
+
+.info-sticker h1{
+font-size:45px;
+color:#ff2d96;
+margin:10px 0;
+}
+
+.info-sticker p{
+font-size:18px;
+margin:12px 0;
+color:#555;
+}
+
+.comprar{
+width:100%;
+padding:15px;
+background:linear-gradient(90deg,#ff4db8,#b64cff);
+border:none;
+border-radius:50px;
+color:white;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+margin-top:15px;
+}
+
+.favorito{
+width:100%;
+padding:15px;
+background:white;
+border:2px solid #ff69b4;
+border-radius:50px;
+color:#ff2d96;
+font-size:18px;
+font-weight:bold;
+margin-top:12px;
+cursor:pointer;
+}
+
+footer{
+margin-top:40px;
+padding:30px;
+background:#fff;
+display:flex;
+justify-content:space-around;
+flex-wrap:wrap;
+border-top:2px solid #ffd2f3;
+color:#8b2be2;
+font-weight:bold;
+text-align:center;
+}
