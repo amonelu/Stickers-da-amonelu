@@ -218,37 +218,24 @@
             background: #e63988;
 
         }
-  /* VITRINE DE STICKERS ORGANIZADA */
-.produtos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 20px;
-    padding: 20px;
+ .produtos-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-around !important;
+    gap: 10px !important;
+    padding: 10px !important;
 }
 
 .produto-card {
+    width: 45% !important; /* Cada cartão ocupa quase metade da tela */
     background: #fff;
     padding: 10px;
     border-radius: 15px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
 }
 
-.produto-card img {
-    width: 100%;
-    border-radius: 10px;
-    display: block;
-}
-
-.btn-comprar {
-    background-color: #ff69b4;
-    color: white;
-    border: none;
-    padding: 10px;
-    width: 100%;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 10px;
 }
        
     </style>
