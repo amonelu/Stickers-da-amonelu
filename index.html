@@ -4,306 +4,131 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amonelu Stickers</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome para ícones -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body {
-            background: #ffeaf7;
-            background-image: radial-gradient(circle, #ffd1ea 2px, transparent 2px);
-            background-size: 30px 30px;
-            color: #7b2c6b;
-            padding-bottom: 50px;
-        }
-
-        header {
-            background: #ffffff;
-            padding: 20px 5%;
-            position: sticky;
-            top: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-            box-shadow: 0 4px 15px rgba(255, 105, 180, .2);
-            z-index: 1000;
-        }
-
-        @media (min-width: 768px) {
-            header {
-                flex-direction: row;
-                justify-content: space-between;
-            }
-            .pesquisa {
-                width: 300px !important;
-                margin-top: 0 !important;
-            }
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: 700;
-            color: #ff4fa3;
-            text-decoration: none;
-        }
-
-        nav {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #a03cc2;
-            font-weight: 600;
-            font-size: 15px;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #ff4fa3;
-        }
-
-        .pesquisa {
-            width: 100%;
-            position: relative;
-        }
-
-        .pesquisa input {
-            width: 100%;
-            padding: 12px 40px 12px 20px;
-            border-radius: 25px;
-            border: 2px solid #ffd1ea;
-            outline: none;
-            font-size: 14px;
-            color: #7b2c6b;
-            box-shadow: 0 2px 8px rgba(255, 105, 180, 0.1);
-        }
-
-        .pesquisa i {
-            position: absolute;
-            right: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #ff4fa3;
-        }
-
-        /* ESTILO DO BANNER */
-        .banner-container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 20px auto 0 auto;
-            padding: 0 5%;
-        }
-
-        .banner-imagem {
-            width: 100%;
-            display: block;
-            border-radius: 20px;
-            box-shadow: 0 6px 20px rgba(255, 105, 180, 0.25);
-            object-fit: cover;
-        }
-
-        /* PREÇOS */
-        .precos-container {
-            background: white;
-            margin: 30px 5%;
-            padding: 25px;
-            border-radius: 20px;
-            box-shadow: 0 4px 15px rgba(255, 105, 180, .1);
-            text-align: center;
-        }
-
-        .precos-container h2 {
-            color: #ff4fa3;
-            font-size: 20px;
-            margin-bottom: 20px;
-        }
-
-        .precos-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-            gap: 12px;
-        }
-
-        .preco-card {
-            background: #ffeaf7;
-            padding: 12px 8px;
-            border-radius: 12px;
-            border: 1px solid #ffd1ea;
-            font-weight: 600;
-            color: #a03cc2;
-            font-size: 14px;
-        }
-
-        .preco-card span {
-            display: block;
-            color: #ff4fa3;
-            font-weight: 700;
-            margin-top: 4px;
-        }
-
-        /* VITRINE */
-        .vitrine-titulo {
-            text-align: center;
-            color: #ff4fa3;
-            margin: 40px 0 20px 0;
-            font-size: 24px;
-        }
-
-        .produtos-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-            gap: 20px;
-            padding: 0 5%;
-        }
-
-        .produto-card {
-            background: white;
-            padding: 15px;
-            border-radius: 20px;
-            text-align: center;
-            border: 1px solid #ffd1ea;
-            box-shadow: 0 4px 10px rgba(255, 105, 180, 0.05);
-        }
-
-        .produto-card img {
-            width: 100%;
-            aspect-ratio: 1;
-            object-fit: cover;
-            border-radius: 15px;
-            background-color: #ffeaf7;
-        }
-
-        .produto-nome {
-            font-weight: 600;
-            margin: 12px 0 4px 0;
-            color: #7b2c6b;
-            font-size: 15px;
-        }
-
-        .produto-preco {
-            color: #ff4fa3;
-            font-weight: 700;
-            font-size: 16px;
-            margin-bottom: 12px;
-        }
-
-        .btn-comprar {
-            background: #ff4fa3;
-            color: white;
-            border: none;
-            padding: 10px;
-            border-radius: 20px;
-            width: 100%;
-            font-weight: 700;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .btn-comprar:hover {
-            background: #e63988;
-
-        }
- .produtos-grid {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: space-around !important;
-    gap: 10px !important;
-    padding: 10px !important;
-}
-
-.produto-card {
-    width: 45% !important; /* Cada cartão ocupa quase metade da tela */
-    background: #fff;
-    padding: 10px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    margin-bottom: 10px;
-}
-
-}
-       
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- CABEÇALHO -->
-    <header>
-        <a href="#" class="logo">💗 Amonelu Stickers 💗</a>
-        <nav>
-            <a href="#">Início</a>
-            <a href="#">Catálogo</a>
-            <a href="#">Favoritos</a>
-            <a href="#">Carrinho (0)</a>
-        </nav>
-        <div class="pesquisa">
-            <input type="text" placeholder="Procurar stickers...">
-            <i class="fas fa-search"></i>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <span class="wing">ଘ</span> Amonelu Stickers <span class="wing">ଓ</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="#" class="active">Início</a>
+                <a href="#">Catálogo</a>
+                <a href="#">Favoritos</a>
+                <a href="#">Carrinho <span class="badge">0</span></a>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Procurar stickers...">
+                <button type="submit">🔍</button>
+            </div>
         </div>
     </header>
 
-    <!-- BANNER -->
-    <div class="banner-container">
-        <img src="banner.jpg" onerror="this.src='banner.png'; this.onerror=function(){this.src='arquivo_0000000b29c720eb9ee8120087b1887.png';};" alt="Amonelu Stickers Banner" class="banner-imagem">
-    </div>
-
-    <!-- PREÇOS PERSONALIZADOS -->
-    <section class="precos-container">
-        <h2>📸 Stickers Personalizados com sua Foto</h2>
-        <div class="precos-grid">
-            <div class="preco-card">3 un. <span>R$ 5,00</span></div>
-            <div class="preco-card">5 un. <span>R$ 8,00</span></div>
-            <div class="preco-card">10 un. <span>R$ 15,00</span></div>
-            <div class="preco-card">20 un. <span>R$ 25,00</span></div>
-            <div class="preco-card">30 un. <span>R$ 35,00</span></div>
-            <div class="preco-card">50 un. <span>R$ 50,00</span></div>
+    <section class="banner-section">
+        <div class="banner-container">
+            <img src="banner-principal.png" alt="Amonelu Stickers Banner" class="main-banner">
         </div>
     </section>
 
-    <!-- VITRINE -->
-    <h2 class="vitrine-titulo">✨ Escolha seus stickers ✨</h2>
-    
-    <section class="produtos-grid">
-        <!-- Card 1 -->
-        <div class="produto-card">
-            <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=300" alt="Acorda Preguiça">
-            <div class="produto-nome">Acorda, Preguiça!</div>
-            <div class="produto-preco">R$ 2,00</div>
-            <button class="btn-comprar">Comprar</button>
+    <section class="categories-section">
+        <div class="categories-container">
+            <button class="cat-btn bts">💜 BTS</button>
+            <button class="cat-btn engraçados">😂 Engraçados</button>
+            <button class="cat-btn cachorros">🐶 Cachorros</button>
+            <button class="cat-btn personalizados">💖 Personalizados</button>
+            <button class="cat-btn musica">🎵 Música</button>
+            <button class="cat-btn series">🎬 Filmes e Séries</button>
+            <button class="cat-btn datas">📅 Datas</button>
+            <button class="cat-btn animados">✨ Animados</button>
         </div>
+    </section>
 
-        <!-- Card 2 -->
-        <div class="produto-card">
-            <img src="https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=300" alt="Bubble Tea">
-            <div class="produto-nome">Hora do Bubble Tea</div>
-            <div class="produto-preco">R$ 2,00</div>
-            <button class="btn-comprar">Comprar</button>
+    <section class="custom-stickers-section">
+        <h2 class="section-title">✨ Stickers Personalizados com sua foto</h2>
+        
+        <div class="custom-container">
+            <div class="custom-info">
+                <p class="custom-description">Envie sua foto, escolha a quantidade e receba stickers únicos!</p>
+                <button class="btn-primary">Personalizar agora</button>
+                
+                <div class="mockup-display">
+                    <div class="phone-mockup">
+                        <div class="phone-screen">👧🏻</div>
+                    </div>
+                    <span class="arrow-step">➔</span>
+                    <div class="stickers-preview">
+                        <div class="mini-sticker">✨👧🏻✨</div>
+                        <div class="mini-sticker">💖👧🏻💖</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="prices-grid">
+                <div class="price-card">
+                    <span class="qty">3 stickers</span>
+                    <span class="price">R$ 5,00</span>
+                </div>
+                <div class="price-card">
+                    <span class="qty">5 stickers</span>
+                    <span class="price">R$ 8,00</span>
+                </div>
+                <div class="price-card">
+                    <span class="qty">10 stickers</span>
+                    <span class="price">R$ 15,00</span>
+                </div>
+                <div class="price-card">
+                    <span class="qty">20 stickers</span>
+                    <span class="price">R$ 25,00</span>
+                </div>
+                <div class="price-card">
+                    <span class="qty">30 stickers</span>
+                    <span class="price">R$ 35,00</span>
+                </div>
+                <div class="price-card">
+                    <span class="qty">50 stickers</span>
+                    <span class="price">R$ 50,00</span>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <!-- Card 3 -->
-        <div class="produto-card">
-            <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=300" alt="Feliz e Confiante">
-            <div class="produto-nome">Feliz e Confiante</div>
-            <div class="produto-preco">R$ 2,00</div>
-            <button class="btn-comprar">Comprar</button>
+    <section class="showcase-section">
+        <h2 class="section-title">✨ Escolha seus stickers ✨</h2>
+        
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="favorite-icon">❤️</div>
+                <div class="product-image">🐶</div>
+                <h3 class="product-name">Acorda, Preguiça!</h3>
+                <span class="product-price">R$ 2,00</span>
+                <button class="btn-buy">🛒 Comprar</button>
+            </div>
+            <div class="product-card">
+                <div class="favorite-icon">❤️</div>
+                <div class="product-image">🐼</div>
+                <h3 class="product-name">Hora do Bubble Tea</h3>
+                <span class="product-price">R$ 2,00</span>
+                <button class="btn-buy">🛒 Comprar</button>
+            </div>
+            <div class="product-card">
+                <div class="favorite-icon">❤️</div>
+                <div class="product-image">👩🏻‍🎤</div>
+                <h3 class="product-name">Feliz e Confiante</h3>
+                <span class="product-price">R$ 2,00</span>
+                <button class="btn-buy">🛒 Comprar</button>
+            </div>
+            <div class="product-card">
+                <div class="favorite-icon">❤️</div>
+                <div class="product-image">🐱</div>
+                <h3 class="product-name">Fofura Pura</h3>
+                <span class="product-price">R$ 2,00</span>
+                <button class="btn-buy">🛒 Comprar</button>
+            </div>
         </div>
     </section>
 
 </body>
 </html>
-
