@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amonelu Stickers</title>
-    <!-- Google Fonts para deixar as fontes redondinhas e lindas -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome para os ícones e corações -->
+    <!-- Font Awesome para ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* TODO O SEU CSS COMPLETO DIRETO AQUI DENTRO */
         * {
             margin: 0;
             padding: 0;
@@ -41,7 +40,6 @@
             z-index: 1000;
         }
 
-        /* Ajuste para telas maiores se organizarem em linha */
         @media (min-width: 768px) {
             header {
                 flex-direction: row;
@@ -54,7 +52,7 @@
         }
 
         .logo {
-            font-size: 28px;
+            font-size: 24px;
             font-weight: 700;
             color: #ff4fa3;
             text-decoration: none;
@@ -103,48 +101,26 @@
             color: #ff4fa3;
         }
 
-        /* BANNER */
-        .banner {
-            text-align: center;
-            padding: 50px 20px 30px 20px;
+        /* ESTILO DO BANNER */
+        .banner-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px auto 0 auto;
+            padding: 0 5%;
         }
 
-        .banner h1 {
-            font-size: 40px;
-            color: #ff4fa3;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-
-        .banner p {
-            color: #a03cc2;
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 25px;
-        }
-
-        .badges {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        .badge-item {
-            background: white;
-            padding: 8px 16px;
+        .banner-imagem {
+            width: 100%;
+            display: block;
             border-radius: 20px;
-            border: 1px solid #ffd1ea;
-            color: #a03cc2;
-            font-weight: 600;
-            font-size: 13px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+            box-shadow: 0 6px 20px rgba(255, 105, 180, 0.25);
+            object-fit: cover;
         }
 
         /* PREÇOS */
         .precos-container {
             background: white;
-            margin: 20px 5%;
+            margin: 30px 5%;
             padding: 25px;
             border-radius: 20px;
             box-shadow: 0 4px 15px rgba(255, 105, 180, .1);
@@ -260,17 +236,10 @@
         </div>
     </header>
 
-    <!-- APRESENTAÇÃO -->
-    <section class="banner">
-        <h1>Amonelu STICKERS</h1>
-        <p>Stickers animados personalizados para WhatsApp e Instagram</p>
-        
-        <div class="badges">
-            <div class="badge-item">⭐ Alta qualidade</div>
-            <div class="badge-item">⚡ Entrega rápida</div>
-            <div class="badge-item">💗 Feito com amor</div>
-        </div>
-    </section>
+    <!-- SISTEMA DE BANNER INTELIGENTE -->
+    <div class="banner-container">
+        <img src="banner.jpg" onerror="this.src='banner.png'; this.onerror=function(){this.src='arquivo_0000000b29c720eb9ee8120087b1887.png';};" alt="Amonelu Stickers Banner" class="banner-imagem">
+    </div>
 
     <!-- PREÇOS PERSONALIZADOS -->
     <section class="precos-container">
