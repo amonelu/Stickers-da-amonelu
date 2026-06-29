@@ -4,131 +4,271 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amonelu Stickers</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#D870F0',
+                        secondary: '#FFB3E6',
+                        darkpurple: '#7A3BB8',
+                        lightpink: '#FFE6F8',
+                        softpurple: '#F8E6FF'
+                    },
+                    fontFamily: {
+                        sans: ['Segoe UI', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.15);
+            }
+            .bg-pattern {
+                background-image: radial-gradient(#e8c8f8 1px, transparent 1px);
+                background-size: 20px 20px;
+            }
+            .glow {
+                box-shadow: 0 0 15px rgba(216, 112, 240, 0.4);
+            }
+        }
+    </style>
 </head>
-<body>
+<body class="bg-gradient-to-br from-[#FFF0FC] to-[#F3E6FF] bg-pattern min-h-screen">
 
-    <header class="header">
-        <div class="header-container">
-            <div class="logo">
-                <span class="wing">ଘ</span> Amonelu Stickers <span class="wing">ଓ</span>
+<!-- Cabeçalho / Navegação -->
+<header class="bg-white/80 backdrop-blur-md rounded-b-3xl shadow-md px-4 py-3 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-3">
+        <div class="flex items-center gap-2">
+            <span class="text-2xl">💖</span>
+            <h1 class="text-2xl md:text-3xl font-bold bg-gradient-to-r from-darkpurple to-primary bg-clip-text text-transparent">Amonelu Stickers</h1>
+        </div>
+
+        <nav class="hidden md:flex gap-6 text-darkpurple font-medium">
+            <a href="#" class="hover:text-primary transition">Início</a>
+            <a href="#" class="hover:text-primary transition">Catálogo</a>
+            <a href="#" class="hover:text-primary transition">Favoritos</a>
+            <a href="#" class="hover:text-primary transition">Carrinho <span class="bg-primary text-white text-xs px-2 rounded-full">0</span></a>
+        </nav>
+
+        <div class="flex items-center gap-2 w-full md:w-auto">
+            <input type="text" placeholder="Procurar stickers..." class="w-full md:w-64 px-4 py-2 rounded-full border border-primary/30 focus:outline-none focus:ring-2 focus:ring-primary/50 bg-white">
+            <button class="text-primary text-xl"><i class="fa fa-search"></i></button>
+            <button class="md:hidden text-xl text-darkpurple"><i class="fa fa-bars"></i></button>
+        </div>
+    </div>
+</header>
+
+<!-- Banner Principal -->
+<section class="max-w-6xl mx-auto px-4 my-6">
+    <div class="bg-gradient-to-r from-[#F9D8F8] to-[#E6D8FF] rounded-3xl p-6 md:p-8 shadow-lg glow relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-10 left-10 text-4xl">🦋</div>
+            <div class="absolute bottom-10 right-10 text-4xl">✨</div>
+        </div>
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="w-full md:w-1/3">
+                <img src="https://i.imgur.com/6yGxM7L.png" alt="Cachorro fofo" class="w-full max-w-xs mx-auto">
             </div>
-            <nav class="nav-menu">
-                <a href="#" class="active">Início</a>
-                <a href="#">Catálogo</a>
-                <a href="#">Favoritos</a>
-                <a href="#">Carrinho <span class="badge">0</span></a>
-            </nav>
-            <div class="search-bar">
-                <input type="text" placeholder="Procurar stickers...">
-                <button type="submit">🔍</button>
+            <div class="text-center md:text-left">
+                <h2 class="text-4xl md:text-6xl font-extrabold text-darkpurple text-shadow">AMONELU<br><span class="text-primary">STICKERS</span></h2>
+                <p class="text-lg text-darkpurple my-3">Stickers animados personalizados para WhatsApp e Instagram</p>
+                <div class="flex flex-wrap justify-center md:justify-start gap-4 my-4">
+                    <span class="flex items-center gap-2"><i class="fa fa-leaf text-primary"></i> Alta qualidade</span>
+                    <span class="flex items-center gap-2"><i class="fa fa-bolt text-primary"></i> Entrega rápida</span>
+                    <span class="flex items-center gap-2"><i class="fa fa-heart text-primary"></i> Feito com amor</span>
+                </div>
+                <div class="flex gap-3 justify-center md:justify-start">
+                    <span class="text-2xl text-green-500"><i class="fa fa-whatsapp"></i></span>
+                    <span class="text-2xl text-pink-600"><i class="fa fa-instagram"></i></span>
+                </div>
+            </div>
+            <div class="bg-white rounded-full p-4 shadow-lg transform rotate-6">
+                <p class="text-center text-sm font-bold text-darkpurple">100%<br>PERSONALIZADO<br>COM AMOR</p>
             </div>
         </div>
-    </header>
+    </div>
+</section>
 
-    <section class="banner-section">
-        <div class="banner-container">
-            <img src="banner-principal.png" alt="Amonelu Stickers Banner" class="main-banner">
-        </div>
-    </section>
+<!-- Filtros / Categorias -->
+<section class="max-w-6xl mx-auto px-4 my-4">
+    <div class="flex flex-wrap gap-2">
+        <button class="bg-primary text-white px-3 py-1 rounded-full text-sm">💖 BTS</button>
+        <button class="bg-primary text-white px-3 py-1 rounded-full text-sm">😂 Engraçados</button>
+        <button class="bg-primary text-white px-3 py-1 rounded-full text-sm">🐶 Cachorros</button>
+        <button class="bg-primary text-white px-3 py-1 rounded-full text-sm">💖 Personalizados</button>
+        <button class="bg-primary text-white px-3 py-1 rounded-full text-sm">🎵 Música</button>
+        <button class="bg-primary text-white px-3 py-1 rounded-full text-sm">🎬 Filmes e Séries</button>
+        <button class="bg-primary text-white px-3 py-1 rounded-full text-sm">📅 Datas</button>
+        <button class="bg-primary text-white px-3 py-1 rounded-full text-sm">✨ Animados</button>
+    </div>
+</section>
 
-    <section class="categories-section">
-        <div class="categories-container">
-            <button class="cat-btn bts">💜 BTS</button>
-            <button class="cat-btn engraçados">😂 Engraçados</button>
-            <button class="cat-btn cachorros">🐶 Cachorros</button>
-            <button class="cat-btn personalizados">💖 Personalizados</button>
-            <button class="cat-btn musica">🎵 Música</button>
-            <button class="cat-btn series">🎬 Filmes e Séries</button>
-            <button class="cat-btn datas">📅 Datas</button>
-            <button class="cat-btn animados">✨ Animados</button>
-        </div>
-    </section>
-
-    <section class="custom-stickers-section">
-        <h2 class="section-title">✨ Stickers Personalizados com sua foto</h2>
-        
-        <div class="custom-container">
-            <div class="custom-info">
-                <p class="custom-description">Envie sua foto, escolha a quantidade e receba stickers únicos!</p>
-                <button class="btn-primary">Personalizar agora</button>
-                
-                <div class="mockup-display">
-                    <div class="phone-mockup">
-                        <div class="phone-screen">👧🏻</div>
-                    </div>
-                    <span class="arrow-step">➔</span>
-                    <div class="stickers-preview">
-                        <div class="mini-sticker">✨👧🏻✨</div>
-                        <div class="mini-sticker">💖👧🏻💖</div>
-                    </div>
-                </div>
+<!-- Seção de Stickers Personalizados -->
+<section class="max-w-6xl mx-auto px-4 my-8">
+    <div class="bg-white rounded-3xl p-6 shadow-md glow">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="text-center md:text-left">
+                <h3 class="text-2xl md:text-3xl font-bold text-darkpurple mb-3">✨ Stickers Personalizados com sua foto</h3>
+                <p class="text-gray-600 mb-4">Envie sua foto, escolha a quantidade e receba stickers únicos!</p>
+                <button class="bg-gradient-to-r from-primary to-darkpurple text-white px-6 py-2 rounded-full shadow hover:opacity-90 transition">Personalizar agora</button>
             </div>
-
-            <div class="prices-grid">
-                <div class="price-card">
-                    <span class="qty">3 stickers</span>
-                    <span class="price">R$ 5,00</span>
+            <div class="flex gap-4 items-center">
+                <img src="https://i.imgur.com/7ZfX7sY.png" alt="Exemplo foto" class="w-32">
+            </div>
+            <div class="grid grid-cols-2 gap-3 text-center">
+                <div class="bg-lightpink rounded-xl p-3 border border-primary/20">
+                    <p class="font-medium text-darkpurple">3 stickers</p>
+                    <p class="text-xl font-bold text-primary">R$ 5,00</p>
                 </div>
-                <div class="price-card">
-                    <span class="qty">5 stickers</span>
-                    <span class="price">R$ 8,00</span>
+                <div class="bg-lightpink rounded-xl p-3 border border-primary/20">
+                    <p class="font-medium text-darkpurple">5 stickers</p>
+                    <p class="text-xl font-bold text-primary">R$ 8,00</p>
                 </div>
-                <div class="price-card">
-                    <span class="qty">10 stickers</span>
-                    <span class="price">R$ 15,00</span>
+                <div class="bg-lightpink rounded-xl p-3 border border-primary/20">
+                    <p class="font-medium text-darkpurple">10 stickers</p>
+                    <p class="text-xl font-bold text-primary">R$ 15,00</p>
                 </div>
-                <div class="price-card">
-                    <span class="qty">20 stickers</span>
-                    <span class="price">R$ 25,00</span>
+                <div class="bg-lightpink rounded-xl p-3 border border-primary/20">
+                    <p class="font-medium text-darkpurple">20 stickers</p>
+                    <p class="text-xl font-bold text-primary">R$ 25,00</p>
                 </div>
-                <div class="price-card">
-                    <span class="qty">30 stickers</span>
-                    <span class="price">R$ 35,00</span>
+                <div class="bg-lightpink rounded-xl p-3 border border-primary/20 col-span-2">
+                    <p class="font-medium text-darkpurple">30 stickers</p>
+                    <p class="text-xl font-bold text-primary">R$ 35,00</p>
                 </div>
-                <div class="price-card">
-                    <span class="qty">50 stickers</span>
-                    <span class="price">R$ 50,00</span>
+                <div class="bg-lightpink rounded-xl p-3 border border-primary/20 col-span-2">
+                    <p class="font-medium text-darkpurple">50 stickers</p>
+                    <p class="text-xl font-bold text-primary">R$ 50,00</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="showcase-section">
-        <h2 class="section-title">✨ Escolha seus stickers ✨</h2>
-        
-        <div class="products-grid">
-            <div class="product-card">
-                <div class="favorite-icon">❤️</div>
-                <div class="product-image">🐶</div>
-                <h3 class="product-name">Acorda, Preguiça!</h3>
-                <span class="product-price">R$ 2,00</span>
-                <button class="btn-buy">🛒 Comprar</button>
+<!-- Catálogo de Stickers -->
+<section class="max-w-6xl mx-auto px-4 my-8">
+    <h3 class="text-2xl font-bold text-center text-darkpurple mb-6">✨ Escolha seus stickers ✨</h3>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+        <!-- Item 1 -->
+        <div class="bg-white rounded-2xl p-3 shadow hover:shadow-lg transition">
+            <div class="relative">
+                <span class="absolute top-1 right-1 text-pink-500">❤️</span>
+                <img src="https://i.imgur.com/9XjRcYh.png" alt="Acorda, Preguiça!" class="w-full aspect-square object-contain">
             </div>
-            <div class="product-card">
-                <div class="favorite-icon">❤️</div>
-                <div class="product-image">🐼</div>
-                <h3 class="product-name">Hora do Bubble Tea</h3>
-                <span class="product-price">R$ 2,00</span>
-                <button class="btn-buy">🛒 Comprar</button>
+            <p class="text-center text-sm font-medium mt-2">Acorda, Preguiça!</p>
+            <p class="text-center text-primary font-bold">R$ 2,00</p>
+            <button class="w-full bg-primary/10 text-primary rounded-md py-1 mt-2 text-sm hover:bg-primary hover:text-white transition">Comprar</button>
+        </div>
+        <!-- Item 2 -->
+        <div class="bg-white rounded-2xl p-3 shadow hover:shadow-lg transition">
+            <div class="relative">
+                <span class="absolute top-1 right-1 text-pink-500">❤️</span>
+                <img src="https://i.imgur.com/8sYqP9L.png" alt="Bubble Tea" class="w-full aspect-square object-contain">
             </div>
-            <div class="product-card">
-                <div class="favorite-icon">❤️</div>
-                <div class="product-image">👩🏻‍🎤</div>
-                <h3 class="product-name">Feliz e Confiante</h3>
-                <span class="product-price">R$ 2,00</span>
-                <button class="btn-buy">🛒 Comprar</button>
+            <p class="text-center text-sm font-medium mt-2">Hora do Bubble Tea</p>
+            <p class="text-center text-primary font-bold">R$ 2,00</p>
+            <button class="w-full bg-primary/10 text-primary rounded-md py-1 mt-2 text-sm hover:bg-primary hover:text-white transition">Comprar</button>
+        </div>
+        <!-- Item 3 -->
+        <div class="bg-white rounded-2xl p-3 shadow hover:shadow-lg transition">
+            <div class="relative">
+                <span class="absolute top-1 right-1 text-pink-500">❤️</span>
+                <img src="https://i.imgur.com/4ZbX7sM.png" alt="Feliz e Confiante" class="w-full aspect-square object-contain">
             </div>
-            <div class="product-card">
-                <div class="favorite-icon">❤️</div>
-                <div class="product-image">🐱</div>
-                <h3 class="product-name">Fofura Pura</h3>
-                <span class="product-price">R$ 2,00</span>
-                <button class="btn-buy">🛒 Comprar</button>
+            <p class="text-center text-sm font-medium mt-2">Feliz e Confiante</p>
+            <p class="text-center text-primary font-bold">R$ 2,00</p>
+            <button class="w-full bg-primary/10 text-primary rounded-md py-1 mt-2 text-sm hover:bg-primary hover:text-white transition">Comprar</button>
+        </div>
+        <!-- Item 4 -->
+        <div class="bg-white rounded-2xl p-3 shadow hover:shadow-lg transition">
+            <div class="relative">
+                <span class="absolute top-1 right-1 text-pink-500">❤️</span>
+                <img src="https://i.imgur.com/5Wv8tKx.png" alt="Fofura Pura" class="w-full aspect-square object-contain">
+            </div>
+            <p class="text-center text-sm font-medium mt-2">Fofura Pura</p>
+            <p class="text-center text-primary font-bold">R$ 2,00</p>
+            <button class="w-full bg-primary/10 text-primary rounded-md py-1 mt-2 text-sm hover:bg-primary hover:text-white transition">Comprar</button>
+        </div>
+        <!-- Item 5 -->
+        <div class="bg-white rounded-2xl p-3 shadow hover:shadow-lg transition">
+            <div class="relative">
+                <span class="absolute top-1 right-1 text-pink-500">❤️</span>
+                <img src="https://i.imgur.com/2vT7cG9.png" alt="Stitch RS" class="w-full aspect-square object-contain">
+            </div>
+            <p class="text-center text-sm font-medium mt-2">Stitch RS</p>
+            <p class="text-center text-primary font-bold">R$ 2,00</p>
+            <button class="w-full bg-primary/10 text-primary rounded-md py-1 mt-2 text-sm hover:bg-primary hover:text-white transition">Comprar</button>
+        </div>
+        <!-- Item 6 -->
+        <div class="bg-white rounded-2xl p-3 shadow hover:shadow-lg transition">
+            <div class="relative">
+                <span class="absolute top-1 right-1 text-pink-500">❤️</span>
+                <img src="https://i.imgur.com/6yGxM7L.png" alt="Amor de Urso" class="w-full aspect-square object-contain">
+            </div>
+            <p class="text-center text-sm font-medium mt-2">Amor de Urso</p>
+            <p class="text-center text-primary font-bold">R$ 2,00</p>
+            <button class="w-full bg-primary/10 text-primary rounded-md py-1 mt-2 text-sm hover:bg-primary hover:text-white transition">Comprar</button>
+        </div>
+    </div>
+    <div class="text-center mt-6">
+        <button class="text-darkpurple font-medium hover:text-primary transition">Ver mais stickers ↓</button>
+    </div>
+</section>
+
+<!-- Produto em Destaque -->
+<section class="max-w-6xl mx-auto px-4 my-8">
+    <div class="bg-white rounded-3xl p-4 shadow-md glow flex flex-col md:flex-row gap-6 items-center">
+        <div class="w-full md:w-1/3">
+            <img src="https://i.imgur.com/9XjRcYh.png" alt="Cachorrinho Fofo" class="w-full max-w-xs mx-auto">
+            <div class="flex gap-2 justify-center mt-3">
+                <img src="https://i.imgur.com/9XjRcYh.png" class="w-12 h-12 rounded-md border border-primary/30">
+                <img src="https://i.imgur.com/9XjRcYh.png" class="w-12 h-12 rounded-md border border-primary/30">
+                <img src="https://i.imgur.com/9XjRcYh.png" class="w-12 h-12 rounded-md border border-primary/30">
+                <img src="https://i.imgur.com/9XjRcYh.png" class="w-12 h-12 rounded-md border border-primary/30">
             </div>
         </div>
-    </section>
+        <div class="w-full md:w-2/3">
+            <div class="flex justify-between items-center">
+                <h4 class="text-xl font-bold text-darkpurple">Cachorrinho Fofo 🐶</h4>
+                <button class="text-gray-500 hover:text-red-500">✕</button>
+            </div>
+            <p class="text-2xl font-bold text-primary my-2">R$ 5,00</p>
+            <div class="flex items-center gap-2 text-sm text-gray-600 mb-3">
+                <span>⭐ 4.9</span>
+                <span>(126 avaliações)</span>
+            </div>
+            <p class="text-gray-700 mb-4">Sticker animado super fofo para deixar suas conversas ainda mais divertidas! 💖</p>
+            <div class="flex items-center gap-3 mb-4">
+                <button class="w-8 h-8 rounded-full bg-gray-100">-</button>
+                <span>1</span>
+                <button class="w-8 h-8 rounded-full bg-gray-100">+</button>
+                <button class="bg-primary text-white px-4 py-2 rounded-md hover:bg-darkpurple transition">Adicionar ao carrinho</button>
+            </div>
+            <div class="flex gap-4 text-sm text-gray-600">
+                <a href="#" class="hover:text-primary">💖 Adicionar aos favoritos</a>
+                <span>Compartilhar:</span>
+                <a href="#" class="text-green-500 text-lg"><i class="fa fa-whatsapp"></i></a>
+                <a href="#" class="text-pink-600 text-lg"><i class="fa fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Rodapé -->
+<footer class="bg-white/70 backdrop-blur-sm rounded-t-3xl py-6 mt-10">
+    <div class="max-w-6xl mx-auto px-4 text-center text-darkpurple">
+        <p class="text-lg font-medium mb-2">💖 Stickers exclusivos ✨</p>
+        <h3 class="text-xl md:text-2xl font-bold my-3">Amonelu Stickers</h3>
+        <p class="text-sm">Atendimento com carinho 💖</p>
+    </div>
+</footer>
 
 </body>
 </html>
+
