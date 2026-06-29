@@ -1,1 +1,345 @@
 
+/* CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FFF0F5; /* Rosa bem clarinho de fundo */
+    color: #4A4A4A;
+}
+
+/* CABEÇALHO */
+.header {
+    background-color: #FFF;
+    border-bottom: 2px solid #FFC0CB;
+    padding: 15px 20px;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #DDA0DD; /* Roxo/Lilás Amonelu */
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #BA55D3;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.nav-menu a.active {
+    font-weight: 700;
+    border-bottom: 2px solid #FF69B4;
+}
+
+.badge {
+    background-color: #FF69B4;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-size: 11px;
+}
+
+.search-bar {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px 40px 10px 15px;
+    border: 2px solid #FFC0CB;
+    border-radius: 25px;
+    outline: none;
+}
+
+.search-bar button {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* BANNER PRINCIPAL */
+.banner-section {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.banner-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.main-banner {
+    width: 100%;
+    border-radius: 20px;
+    display: block;
+}
+
+/* CATEGORIAS */
+.categories-section {
+    padding: 15px 10px;
+    overflow-x: auto; /* Permite arrastar pro lado no celular */
+}
+
+.categories-container {
+    display: flex;
+    gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cat-btn {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: none;
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: pointer;
+    color: white;
+}
+
+/* Cores dos botões baseados no original */
+.bts { background-color: #8A2BE2; }
+.engraçados { background-color: #BA55D3; }
+.cachorros { background-color: #9370DB; }
+.personalizados { background-color: #FF69B4; }
+.musica { background-color: #9400D3; }
+.series { background-color: #7B68EE; }
+.datas { background-color: #FF1493; }
+.animados { background-color: #BA55D3; }
+
+/* SEÇÃO CUSTOMIZAÇÃO COM FOTO */
+.custom-stickers-section {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #FFF;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.section-title {
+    font-family: 'Fredoka', sans-serif;
+    color: #FF69B4;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.custom-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.custom-description {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.btn-primary {
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto 25px auto;
+    background-color: #FF69B4;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(255, 105, 180, 0.3);
+}
+
+/* Mockup ilustrativo */
+.mockup-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.phone-mockup {
+    width: 80px;
+    height: 140px;
+    border: 4px solid #333;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    background: #f9f9f9;
+}
+
+.arrow-step {
+    font-size: 24px;
+    color: #FF69B4;
+}
+
+.stickers-preview {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mini-sticker {
+    background: #FFF;
+    border: 2px dashed #FF69B4;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+/* TABELA DE PREÇOS (GRID) */
+.prices-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.price-card {
+    background-color: #FFF0F5;
+    border: 2px solid #FFC0CB;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.price-card .qty {
+    font-weight: 600;
+    color: #BA55D3;
+}
+
+.price-card .price {
+    font-size: 18px;
+    font-weight: 700;
+    color: #FF69B4;
+}
+
+/* VITRINE DE PRODUTOS */
+.showcase-section {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 10px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px;
+    position: relative;
+    text-align: center;
+    border: 1px solid #FFE4E1;
+}
+
+.favorite-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #FFC0CB;
+    cursor: pointer;
+}
+
+.product-image {
+    font-size: 50px;
+    margin-bottom: 10px;
+    background-color: #FFF5EE;
+    padding: 20px 0;
+    border-radius: 10px;
+}
+
+.product-name {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    min-height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-price {
+    display: block;
+    font-weight: 700;
+    color: #4A4A4A;
+    margin-bottom: 10px;
+}
+
+.btn-buy {
+    width: 100%;
+    background-color: #FF69B4;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* ====================================================
+   REGRAS PARA TELAS GRANDES (COMPUTADOR / TABLET)
+   ==================================================== */
+@media (min-width: 768px) {
+    .header-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .custom-container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .custom-info, .prices-grid {
+        flex: 1;
+    }
+
+    .prices-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
