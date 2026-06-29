@@ -1,1 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amonelu Stickers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        rosa: {
+                            claro: '#FFE6F2',
+                            medio: '#FFB3D9',
+                            escuro: '#FF66B3'
+                        },
+                        roxo: {
+                            claro: '#E6CCFF',
+                            medio: '#B366FF',
+                            escuro: '#8000CC'
+                        }
+                    },
+                    fontFamily: {
+                        fofa: ['Comic Sans MS', 'cursive', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-sombra {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.15);
+            }
+            .borda-fofa {
+                border-radius: 1.5rem;
+            }
+            .sombra-fofa {
+                box-shadow: 0 4px 12px rgba(255, 102, 179, 0.25);
+            }
+            .bg-gradiente {
+                background: linear-gradient(135deg, #FFE6F2 0%, #E6CCFF 100%);
+            }
+            .botao {
+                @apply px-4 py-2 rounded-full font-bold transition-all duration-300 hover:scale-105;
+            }
+            .botao-rosa {
+                @apply bg-rosa-escuro text-white hover:bg-rosa-medio;
+            }
+            .botao-roxo {
+                @apply bg-roxo-medio text-white hover:bg-roxo-escuro;
+            }
+            .card {
+                @apply bg-white p-3 borda-fofa sombra-fofa transition-transform hover:scale-[1.03];
+            }
+        }
+    </style>
+</head>
+<body class="bg-gradiente font-fofa text-gray-800 min-h-screen">
+
+    <!-- Cabeçalho / Navegação -->
+    <header class="bg-white/80 backdrop-blur-md borda-fofa mx-4 my-3 p-3 shadow-md">
+        <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-3">
+            <div class="flex items-center gap-2">
+                <span class="text-roxo-medio text-2xl">💖</span>
+                <h1 class="text-2xl md:text-3xl font-bold bg-gradient-to-r from-roxo-escuro to-rosa-escuro bg-clip-text text-transparent text-sombra">Amonelu Stickers</h1>
+            </div>
+
+            <nav class="flex gap-3 text-sm md:text-base">
+                <a href="#" class="text-roxo-escuro font-bold hover:text-rosa-escuro">Início</a>
+                <a href="#" class="text-roxo-escuro font-bold hover:text-rosa-escuro">Catálogo</a>
+                <a href="#" class="text-roxo-escuro font-bold hover:text-rosa-escuro">Favoritos</a>
+                <a href="#" class="text-roxo-escuro font-bold hover:text-rosa-escuro">Carrinho <span class="bg-rosa-escuro text-white text-xs px-2 rounded-full">0</span></a>
+            </nav>
+
+            <div class="relative w-full md:w-64">
+                <input type="text" placeholder="Procurar stickers..." class="w-full px-4 py-2 rounded-full border border-roxo-claro focus:outline-none focus:ring-2 focus:ring-rosa-medio">
+                <i class="fa fa-search absolute right-3 top-2.5 text-roxo-medio"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner Principal -->
+    <section class="max-w-6xl mx-auto px-4 my-6">
+        <div class="bg-white borda-fofa p-6 sombra-fofa overflow-hidden relative">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="text-center md:text-left">
+                    <h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-roxo-escuro to-rosa-escuro bg-clip-text text-transparent text-sombra mb-3">AMONELU STICKERS</h2>
+                    <p class="text-lg text-gray-600 mb-4">Stickers animados personalizados para WhatsApp e Instagram ✨</p>
+                    <div class="flex flex-wrap justify-center md:justify-start gap-6 mb-4">
+                        <div class="flex items-center gap-2">
+                            <span class="text-rosa-escuro text-xl">🌸</span>
+                            <span>Alta qualidade</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-roxo-medio text-xl">⚡</span>
+                            <span>Entrega rápida</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-rosa-escuro text-xl">💗</span>
+                            <span>Feito com amor</span>
+                        </div>
+                    </div>
+                    <div class="inline-block bg-roxo-medio text-white px-5 py-2 rounded-full font-bold text-lg">100% PERSONALIZADO 💖</div>
+                </div>
+                <div class="relative">
+                    <img src="https://i.imgur.com/7fKfXqM.png" alt="Cachorro fofo" class="w-64 h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Stickers Personalizados -->
+    <section class="max-w-6xl mx-auto px-4 my-8">
+        <div class="bg-white borda-fofa p-6 sombra-fofa">
+            <h3 class="text-2xl md:text-3xl font-bold text-center text-roxo-escuro mb-6">✨ Stickers Personalizados com sua foto ✨</h3>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+                <div class="text-center">
+                    <p class="text-gray-600 mb-4">Envie sua foto, escolha a quantidade e receba stickers únicos!</p>
+                    <button class="botao botao-rosa text-lg px-6">Personalizar agora 🎀</button>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                    <div class="bg-rosa-claro p-3 borda-fofa text-center">
+                        <p class="font-bold text-roxo-escuro">3 stickers</p>
+                        <p class="text-xl font-bold text-rosa-escuro">R$ 5,00</p>
+                    </div>
+                    <div class="bg-rosa-claro p-3 borda-fofa text-center">
+                        <p class="font-bold text-roxo-escuro">5 stickers</p>
+                        <p class="text-xl font-bold text-rosa-escuro">R$ 8,00</p>
+                    </div>
+                    <div class="bg-rosa-claro p-3 borda-fofa text-center">
+                        <p class="font-bold text-roxo-escuro">10 stickers</p>
+                        <p class="text-xl font-bold text-rosa-escuro">R$ 15,00</p>
+                    </div>
+                    <div class="bg-rosa-claro p-3 borda-fofa text-center">
+                        <p class="font-bold text-roxo-escuro">20 stickers</p>
+                        <p class="text-xl font-bold text-rosa-escuro">R$ 25,00</p>
+                    </div>
+                    <div class="bg-rosa-claro p-3 borda-fofa text-center">
+                        <p class="font-bold text-roxo-escuro">30 stickers</p>
+                        <p class="text-xl font-bold text-rosa-escuro">R$ 35,00</p>
+                    </div>
+                    <div class="bg-rosa-claro p-3 borda-fofa text-center">
+                        <p class="font-bold text-roxo-escuro">50 stickers</p>
+                        <p class="text-xl font-bold text-rosa-escuro">R$ 50,00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categorias -->
+    <section class="max-w-6xl mx-auto px-4 my-6">
+        <div class="flex flex-wrap gap-2 justify-center">
+            <button class="botao botao-roxo">💖 BTS</button>
+            <button class="botao botao-roxo">🤪 Engraçados</button>
+            <button class="botao botao-roxo">🐶 Cachorros</button>
+            <button class="botao botao-rosa">🎀 Personalizados</button>
+            <button class="botao botao-roxo">🎵 Música</button>
+            <button class="botao botao-roxo">🎬 Filmes e Séries</button>
+            <button class="botao botao-roxo">📅 Datas</button>
+            <button class="botao botao-roxo">✨ Animados</button>
+        </div>
+    </section>
+
+    <!-- Lista de Stickers -->
+    <section class="max-w-6xl mx-auto px-4 my-8">
+        <h3 class="text-2xl font-bold text-center text-roxo-escuro mb-6">💖 Escolha seus stickers 💖</h3>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            <!-- Card 1 -->
+            <div class="card">
+                <div class="relative">
+                    <span class="absolute top-1 right-1 text-rosa-escuro">❤️</span>
+                    <img src="https://i.imgur.com/7fKfXqM.png" alt="Cachorro" class="w-full h-40 object-contain">
+                </div>
+                <h4 class="text-center font-bold mt-2">Acorda, Preguiça!</h4>
+                <p class="text-center text-roxo-escuro font-bold">R$ 2,00</p>
+                <button class="w-full mt-2 botao botao-rosa">Comprar</button>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <div class="relative">
+                    <span class="absolute top-1 right-1 text-rosa-escuro">❤️</span>
+                    <img src="https://i.imgur.com/9Z7XyQH.png" alt="Panda" class="w-full h-40 object-contain">
+                </div>
+                <h4 class="text-center font-bold mt-2">Hora do Bubble Tea</h4>
+                <p class="text-center text-roxo-escuro font-bold">R$ 2,00</p>
+                <button class="w-full mt-2 botao botao-rosa">Comprar</button>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <div class="relative">
+                    <span class="absolute top-1 right-1 text-rosa-escuro">❤️</span>
+                    <img src="https://i.imgur.com/5gGzQ8L.png" alt="Menina" class="w-full h-40 object-contain">
+                </div>
+                <h4 class="text-center font-bold mt-2">Feliz e Confiante</h4>
+                <p class="text-center text-roxo-escuro font-bold">R$ 2,00</p>
+                <button class="w-full mt-2 botao botao-rosa">Comprar</button>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card">
+                <div class="relative">
+                    <span class="absolute top-1 right-1 text-rosa-escuro">❤️</span>
+                    <img src="https://i.imgur.com/8mKf9Rj.png" alt="Gatinho" class="w-full h-40 object-contain">
+                </div>
+                <h4 class="text-center font-bold mt-2">Fofura Pura</h4>
+                <p class="text-center text-roxo-escuro font-bold">R$ 2,00</p>
+                <button class="w-full mt-2 botao botao-rosa">Comprar</button>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="card">
+                <div class="relative">
+                    <span class="absolute top-1 right-1 text-rosa-escuro">❤️</span>
+                    <img src="https://i.imgur.com/3yS7e9k.png" alt="Stitch" class="w-full h-40 object-contain">
+                </div>
+                <h4 class="text-center font-bold mt-2">Stitch Fofo</h4>
+                <p class="text-center text-roxo-escuro font-bold">R$ 2,00</p>
+                <button class="w-full mt-2 botao botao-rosa">Comprar</button>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="card">
+                <div class="relative">
+                    <span class="absolute top-1 right-1 text-rosa-escuro">❤️</span>
+                    <img src="https://i.imgur.com/4xZ9wQH.png" alt="Urso" class="w-full h-40 object-contain">
+                </div>
+                <h4 class="text-center font-bold mt-2">Amor de Urso</h4>
+                <p class="text-center text-roxo-escuro font-bold">R$ 2,00</p>
+                <button class="w-full mt-2 botao botao-rosa">Comprar</button>
+            </div>
+        </div>
+
+        <div class="text-center mt-6">
+            <button class="botao botao-roxo">Ver mais stickers 📦</button>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="mt-12 py-6 text-center text-roxo-escuro">
+        <p class="font-bold text-lg">💖 Obrigada por visitar a Amonelu Stickers 💖</p>
+        <p class="text-sm mt-1">Atendimento com carinho | 2026</p>
+    </footer>
+
+</body>
+</html>
 
