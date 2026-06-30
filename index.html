@@ -1,154 +1,121 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amonelu Stickers 💖</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        rosa: { claro: '#FFE6F7', medio: '#FF99D6', escuro: '#FF4DB3' },
-                        roxo: { claro: '#F3E5FF', medio: '#C27DFF', escuro: '#9933FF' }
-                    },
-                    fontFamily: { fofa: ['"Segoe Print"', 'cursive', 'sans-serif'] }
-                }
-            }
-        }
-    </script>
-    <style type="text/tailwindcss">
-        @layer utilities {
-            .fundo-site {
-                background: linear-gradient(180deg, #FFE6F7 0%, #F0D9FF 100%);
-                position: relative;
-                min-height: 100vh;
-            }
-            .fundo-site::before {
-                content: "Amonelu ♡ 🦋";
-                position: fixed; inset: 0;
-                font-size: 22px; color: rgba(255, 77, 179, 0.07);
-                font-family: "Segoe Print", cursive;
-                letter-spacing: 8px; line-height: 70px;
-                transform: rotate(-3deg); z-index: 0; pointer-events: none;
-            }
-            .conteudo { position: relative; z-index: 1; }
-            .borda-fofa { border-radius: 1.8rem; }
-            .sombra-suave { box-shadow: 0 4px 12px rgba(153, 51, 255, 0.15); }
-            .card-imagem { @apply w-full h-44 bg-roxo-claro/40 rounded-xl flex items-center justify-center overflow-hidden; }
-        }
-    </style>
-</head>
-<body class="fundo-site font-fofa">
-<div class="conteudo">
+<meta charset="UTF-8">
+<title>Meu Site Fofo</title>
 
-<header class="mx-3 mt-5 p-4 bg-white/95 borda-fofa sombra-suave">
-    <div class="flex flex-wrap items-center justify-between gap-3">
-        <h1 class="text-xl md:text-2xl font-bold bg-gradient-to-r from-rosa-escuro to-roxo-escuro bg-clip-text text-transparent flex items-center gap-2">💖 Amonelu Stickers</h1>
-        <nav class="flex gap-4 text-sm text-roxo-escuro">
-            <a href="#" class="hover:text-rosa-escuro transition-colors">Início</a>
-            <a href="#" class="hover:text-rosa-escuro transition-colors">Catálogo</a>
-            <a href="#" class="hover:text-rosa-escuro transition-colors">Favoritos</a>
-            <a href="#" class="hover:text-rosa-escuro transition-colors">Carrinho <span class="bg-rosa-escuro text-white px-2 rounded-full text-xs">0</span></a>
-        </nav>
-        <div class="relative w-full md:w-60">
-            <input type="text" placeholder="Procurar stickers..." class="w-full px-4 py-2 rounded-full border border-roxo-claro focus:outline-none focus:ring-1 focus:ring-rosa-medio">
-            <i class="fa fa-search absolute right-3 top-2 text-roxo-medio"></i>
-        </div>
-    </div>
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background-color:#ffeef6;
+
+    /* Papel de parede de corações */
+    background-image:
+    radial-gradient(#ff9ecb 2px, transparent 2px),
+    radial-gradient(#ffffff 2px, transparent 2px);
+
+    background-size:40px 40px;
+    background-position:0 0,20px 20px;
+}
+
+/* Cabeçalho */
+header{
+    background:linear-gradient(90deg,#ffb6d9,#ffd6ea);
+    color:#fff;
+    text-align:center;
+    padding:20px;
+    font-size:28px;
+    font-weight:bold;
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
+}
+
+/* Vitrine */
+.vitrine{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    padding:25px;
+}
+
+.card{
+    background:white;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(255,105,180,.25);
+    transition:.3s;
+    border:3px solid #ffd6ea;
+}
+
+.card:hover{
+    transform:translateY(-8px) scale(1.03);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card h3{
+    color:#ff5fa2;
+    text-align:center;
+}
+
+.card p{
+    text-align:center;
+    color:#666;
+}
+
+.botao{
+    display:block;
+    width:80%;
+    margin:15px auto;
+    padding:12px;
+    background:#ff8fc1;
+    color:white;
+    text-align:center;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.botao:hover{
+    background:#ff5fa2;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+♡ Meu Cantinho Fofo ♡
 </header>
 
-<section class="mx-3 my-6 p-3 bg-white/95 borda-fofa sombra-suave">
-    <div class="w-full rounded-xl overflow-hidden">
-        <img src="imagens/banner.png" alt="Amonelu Stickers - Feito com amor" class="w-full h-auto object-contain">
-    </div>
-</section>
+<div class="vitrine">
 
-<section class="mx-3 my-6 p-6 bg-white/95 borda-fofa sombra-suave text-center">
-    <h3 class="text-xl md:text-2xl font-bold text-roxo-escuro mb-4">✨ Stickers Personalizados com sua foto ✨</h3>
-    <p class="text-gray-600 mb-6">Envie sua foto, escolha a quantidade e receba adesivos únicos feitos com muito carinho!</p>
-    <button class="bg-gradient-to-r from-rosa-escuro to-roxo-medio text-white px-7 py-2.5 rounded-full font-bold mb-7 hover:opacity-90 transition-opacity">Personalizar agora 🎀</button>
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-        <div class="bg-rosa-claro/70 p-3 rounded-full"><p class="text-roxo-escuro font-medium">3 unidades</p><p class="text-xl font-bold text-rosa-escuro">R$ 5,00</p></div>
-        <div class="bg-rosa-claro/70 p-3 rounded-full"><p class="text-roxo-escuro font-medium">5 unidades</p><p class="text-xl font-bold text-rosa-escuro">R$ 8,00</p></div>
-        <div class="bg-rosa-claro/70 p-3 rounded-full"><p class="text-roxo-escuro font-medium">10 unidades</p><p class="text-xl font-bold text-rosa-escuro">R$ 15,00</p></div>
-        <div class="bg-rosa-claro/70 p-3 rounded-full"><p class="text-roxo-escuro font-medium">20 unidades</p><p class="text-xl font-bold text-rosa-escuro">R$ 25,00</p></div>
-        <div class="bg-rosa-claro/70 p-3 rounded-full"><p class="text-roxo-escuro font-medium">30 unidades</p><p class="text-xl font-bold text-rosa-escuro">R$ 35,00</p></div>
-        <div class="bg-rosa-claro/70 p-3 rounded-full"><p class="text-roxo-escuro font-medium">50 unidades</p><p class="text-xl font-bold text-rosa-escuro">R$ 55,00</p></div>
-    </div>
-</section>
+<div class="card">
+<img src="https://via.placeholder.com/300x300" alt="">
+<h3>Sticker 1</h3>
+<p>Bem fofinho ♡</p>
+<a href="#" class="botao">Ver</a>
+</div>
 
-<section class="mx-3 my-6">
-    <div class="flex flex-wrap justify-center gap-2.5">
-        <button class="bg-roxo-medio text-white px-4 py-2 rounded-full text-sm hover:bg-roxo-escuro transition-colors">💖 BTS</button>
-        <button class="bg-roxo-medio text-white px-4 py-2 rounded-full text-sm hover:bg-roxo-escuro transition-colors">🤪 Engraçados</button>
-        <button class="bg-roxo-medio text-white px-4 py-2 rounded-full text-sm hover:bg-roxo-escuro transition-colors">🐶 Cachorros</button>
-        <button class="bg-rosa-escuro text-white px-4 py-2 rounded-full text-sm hover:bg-rosa-medio transition-colors">🎀 Personalizados</button>
-        <button class="bg-roxo-medio text-white px-4 py-2 rounded-full text-sm hover:bg-roxo-escuro transition-colors">🎵 Música</button>
-        <button class="bg-roxo-medio text-white px-4 py-2 rounded-full text-sm hover:bg-roxo-escuro transition-colors">🎬 Filmes e Séries</button>
-        <button class="bg-roxo-medio text-white px-4 py-2 rounded-full text-sm hover:bg-roxo-escuro transition-colors">📅 Datas</button>
-        <button class="bg-roxo-medio text-white px-4 py-2 rounded-full text-sm hover:bg-roxo-escuro transition-colors">✨ Animados</button>
-    </div>
-</section>
+<div class="card">
+<img src="https://via.placeholder.com/300x300" alt="">
+<h3>Sticker 2</h3>
+<p>Super meigo ♡</p>
+<a href="#" class="botao">Ver</a>
+</div>
 
-<section class="mx-3 my-6">
-    <h3 class="text-xl md:text-2xl font-bold text-center text-roxo-escuro mb-6">💖✨ Escolha seus stickers ✨💖</h3>
-    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
-        <div class="bg-white/95 p-4 borda-fofa sombra-suave text-center hover:scale-[1.02] transition-transform">
-            <div class="flex justify-end text-rosa-escuro text-xl">❤️</div>
-            <div class="card-imagem"><img src="imagens/acorda-preguica.png" alt="Acorda, Preguiça!" class="w-full h-full object-contain p-2"></div>
-            <h4 class="text-roxo-escuro my-3 font-medium">Acorda, Preguiça!</h4>
-            <p class="text-rosa-escuro font-bold mb-3">R$ 2,00</p>
-            <button class="w-full bg-rosa-escuro text-white py-2 rounded-full text-sm hover:bg-rosa-medio transition-colors">Comprar 🛒</button>
-        </div>
-        <div class="bg-white/95 p-4 borda-fofa sombra-suave text-center hover:scale-[1.02] transition-transform">
-            <div class="flex justify-end text-rosa-escuro text-xl">❤️</div>
-            <div class="card-imagem"><img src="imagens/bubble-tea.png" alt="Hora do Bubble Tea" class="w-full h-full object-contain p-2"></div>
-            <h4 class="text-roxo-escuro my-3 font-medium">Hora do Bubble Tea</h4>
-            <p class="text-rosa-escuro font-bold mb-3">R$ 2,00</p>
-            <button class="w-full bg-rosa-escuro text-white py-2 rounded-full text-sm hover:bg-rosa-medio transition-colors">Comprar 🛒</button>
-        </div>
-        <div class="bg-white/95 p-4 borda-fofa sombra-suave text-center hover:scale-[1.02] transition-transform">
-            <div class="flex justify-end text-rosa-escuro text-xl">❤️</div>
-            <div class="card-imagem"><img src="imagens/feliz-confiante.png" alt="Feliz e Confiante" class="w-full h-full object-contain p-2"></div>
-            <h4 class="text-roxo-escuro my-3 font-medium">Feliz e Confiante</h4>
-            <p class="text-rosa-escuro font-bold mb-3">R$ 2,00</p>
-            <button class="w-full bg-rosa-escuro text-white py-2 rounded-full text-sm hover:bg-rosa-medio transition-colors">Comprar 🛒</button>
-        </div>
-        <div class="bg-white/95 p-4 borda-fofa sombra-suave text-center hover:scale-[1.02] transition-transform">
-            <div class="flex justify-end text-rosa-escuro text-xl">❤️</div>
-            <div class="card-imagem"><img src="imagens/fofura-pura.png" alt="Fofura Pura" class="w-full h-full object-contain p-2"></div>
-            <h4 class="text-roxo-escuro my-3 font-medium">Fofura Pura</h4>
-            <p class="text-rosa-escuro font-bold mb-3">R$ 2,00</p>
-            <button class="w-full bg-rosa-escuro text-white py-2 rounded-full text-sm hover:bg-rosa-medio transition-colors">Comprar 🛒</button>
-        </div>
-        <div class="bg-white/95 p-4 borda-fofa sombra-suave text-center hover:scale-[1.02] transition-transform">
-            <div class="flex justify-end text-rosa-escuro text-xl">❤️</div>
-            <div class="card-imagem"><img src="imagens/stitch-fofo.png" alt="Stitch Fofo" class="w-full h-full object-contain p-2"></div>
-            <h4 class="text-roxo-escuro my-3 font-medium">Stitch Fofo</h4>
-            <p class="text-rosa-escuro font-bold mb-3">R$ 2,00</p>
-            <button class="w-full bg-rosa-escuro text-white py-2 rounded-full text-sm hover:bg-rosa-medio transition-colors">Comprar 🛒</button>
-        </div>
-        <div class="bg-white/95 p-4 borda-fofa sombra-suave text-center hover:scale-[1.02] transition-transform">
-            <div class="flex justify-end text-rosa-escuro text-xl">❤️</div>
-            <div class="card-imagem"><img src="imagens/amor-de-urso.png" alt="Amor de Urso" class="w-full h-full object-contain p-2"></div>
-            <h4 class="text-roxo-escuro my-3 font-medium">Amor de Urso</h4>
-            <p class="text-rosa-escuro font-bold mb-3">R$ 2,00</p>
-            <button class="w-full bg-rosa-escuro text-white py-2 rounded-full text-sm hover:bg-rosa-medio transition-colors">Comprar 🛒</button>
-        </div>
-    </div>
-    <div class="text-center mt-8">
-        <button class="bg-roxo-medio text-white px-9 py-2.5 rounded-full font-medium hover:bg-roxo-escuro transition-colors">Ver mais stickers 📦</button>
-    </div>
-</section>
-
-<footer class="mx-3 my-10 p-5 text-center text-roxo-escuro text-sm">
-    <p class="text-lg font-medium">💖✨ Obrigada por visitar a Amonelu Stickers ✨💖</p>
-    <p class="mt-2">Atendimento com carinho | 2026</p>
-</footer>
+<div class="card">
+<img src="https://via.placeholder.com/300x300" alt="">
+<h3>Sticker 3</h3>
+<p>Novidade ♡</p>
+<a href="#" class="botao">Ver</a>
+</div>
 
 </div>
+
 </body>
 </html>
